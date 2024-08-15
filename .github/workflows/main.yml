@@ -1,4 +1,4 @@
-name: Vercel_Pipeline
+name: Vercel Pipeline
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -34,7 +34,7 @@ jobs:
         run: vercel pull --yes --environment=development --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Build Project Artifacts
-        run: vercel builds --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts To Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
