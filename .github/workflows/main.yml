@@ -10,7 +10,7 @@ on:
 
 jobs:
   Deploy-development:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: "checkout code"
